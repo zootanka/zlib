@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>zmartonos</groupId>
+	<groupId>org.zmartonos</groupId>
 	<artifactId>zlib</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -28,12 +28,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<scm>
-		<connection>scm:git:git://git.eclipse.org/gitroot/aether/aether-demo.git</connection>
-		<developerConnection>scm:git:ssh://git.eclipse.org/gitroot/aether/aether-demo.git</developerConnection>
-		<url>http://git.eclipse.org/c/aether/aether-demo.git/</url>
-	</scm>
 
 	<dependencies>
 		<dependency>
