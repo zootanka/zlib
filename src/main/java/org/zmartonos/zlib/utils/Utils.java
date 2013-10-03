@@ -16,6 +16,7 @@ import org.apache.commons.codec.digest.DigestUtils;
  *
  */
 public class Utils {
+	public static final String htmlCache= "/var/htmlcache/";
 	/**
 	 * 
 	 * @return
@@ -99,6 +100,18 @@ public class Utils {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public static String getCachedUrlContent(final String url) throws IOException{
+		String content= "";
+		String cacheLink= htmlCache+Utils.getMd5Hash(url);
+		if(Utils.fileExists(cacheLink))
+			content= Utils.getFileContent(cacheLink);
+		else{
+			content= Utils.getUrlContent(url);
+			Utils.writeContentToFile(content, cacheLink);
+		}
+		return content;
 	}
 
 	public static void main(String[] args){
